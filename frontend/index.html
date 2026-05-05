@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Team Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 🔷 HEADER -->
+<div class="header">
+  <h1>🚀 Team Task Manager</h1>
+  <div>
+    <button onclick="toggleDark()">🌙</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 🔐 LOGIN -->
+  <div class="card">
+    <h2>Login</h2>
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- 📁 PROJECT -->
+  <div class="card">
+    <h2>Create Project</h2>
+    <input id="projectName" placeholder="Project Name">
+    <button onclick="createProject()">Create</button>
+  </div>
+
+  <!-- 📌 TASK -->
+  <div class="card">
+    <h2>Create Task</h2>
+    <input id="title" placeholder="Title">
+    <input id="desc" placeholder="Description">
+    <input id="date" placeholder="YYYY-MM-DD">
+    <button onclick="createTask()">Create Task</button>
+  </div>
+
+  <!-- 📊 DASHBOARD -->
+  <div class="card">
+    <h2>Dashboard</h2>
+    <button onclick="loadDashboard()">Load Dashboard</button>
+
+    <div id="stats" class="dashboard"></div>
+  </div>
+
+  <!-- 📋 TASK LIST -->
+  <div class="card">
+    <h2>Tasks</h2>
+
+    <!-- 🔍 FILTER BUTTONS -->
+    <div class="filters">
+      <button onclick="filterTasks('All')">All</button>
+      <button onclick="filterTasks('Pending')">Pending</button>
+      <button onclick="filterTasks('Completed')">Completed</button>
+    </div>
+
+    <button onclick="loadTasks()">Load Tasks</button>
+
+    <div id="tasks"></div>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
